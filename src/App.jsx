@@ -1,8 +1,8 @@
 // src/App.jsx
 import React, { useState } from 'react';
+import Step1Shapes from './steps/Step1Shapes';   // Now implemented
 import Step2Strokes from './steps/Step2Strokes';
 import Step3Letters from './steps/Step3Letters'; // Now implemented
-// import Step1Shapes from './steps/Step1Shapes';   // Still needs to be created
 
 function App() {
   // Later, you'll use state to switch between steps
@@ -32,7 +32,6 @@ function App() {
       </button>
     </nav>
   );
-
   const renderStep = () => {
     if (currentStepComponent === "strokes") {
       return <Step2Strokes />;
@@ -40,10 +39,10 @@ function App() {
     if (currentStepComponent === "letters") {
       return <Step3Letters />;
     }
-    // if (currentStepComponent === "shapes") {
-    //  return <Step1Shapes />;
-    // }
-    return <div className="p-10 text-center text-xl">Select a step to begin! (Shapes coming soon)</div>;
+    if (currentStepComponent === "shapes") {
+      return <Step1Shapes />;
+    }
+    return <div className="p-10 text-center text-xl">Select a step to begin!</div>;
   };
 
 

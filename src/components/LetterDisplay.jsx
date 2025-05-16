@@ -26,7 +26,7 @@ function LetterDisplay({ SvgComponent, guideColor = "stroke-guide-stroke" }) {
           const svgElement = container.querySelector('svg');
           if (svgElement) {            // Apply styling to make it much larger
             svgElement.style.width = '100%';
-            svgElement.style.height = '100%';
+            svgElement.style.height = '70%';
             
             // Use a more balanced aspect ratio preservation
             svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet');
